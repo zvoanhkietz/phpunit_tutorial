@@ -34,7 +34,28 @@ class SystemTest extends TestCase
     {
         
     }
-    
+
+    /**
+     * 
+     */
+    public function testRandom()
+    {
+        // WHEN
+        $actual1 = $this->object->rand(1, 2);
+        $actual2 = $this->object->rand(1);
+        $actual3 = $this->object->rand();
+
+        // THEN
+        $this->assertGreaterThanOrEqual(1, $actual1);
+        $this->assertLessThanOrEqual(2, $actual1);
+
+        $this->assertGreaterThanOrEqual(1, $actual2);
+        $this->assertLessThanOrEqual(getrandmax(), $actual2);
+
+        $this->assertGreaterThanOrEqual(0, $actual3);
+        $this->assertLessThanOrEqual(getrandmax(), $actual3);
+    }
+
     /**
      * 
      */
@@ -43,7 +64,7 @@ class SystemTest extends TestCase
         $datetime = $this->object->createObject('\DateTime');
         $this->assertInstanceOf('\DateTime', $datetime);
         $this->assertEquals(time(), $datetime->getTimeStamp());
-        
+
         $std = $this->object->createObject('\stdClass');
         $this->assertInstanceOf('\stdClass', $std);
     }
