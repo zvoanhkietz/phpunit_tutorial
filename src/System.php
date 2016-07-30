@@ -62,7 +62,7 @@ trait System
      * @param int $depth
      * @return string
      */
-    public function jsonEndcode($value, $options = 0, $depth = 512)
+    public function jsonEncode($value, $options = 0, $depth = 512)
     {
         return json_encode($value, $options, $depth);
     }
