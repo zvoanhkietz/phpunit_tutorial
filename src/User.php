@@ -21,7 +21,7 @@ class User
             $user['created'] = $this->createObject('\DateTime')->getTimestamp();
         }
         if (!$this->save($user)) {
-            $this->log("Couldn't save user: " . json_encode($user), 'error');
+            $this->log("Couldn't save user: " . $this->jsonEncode($user), 'error');
             return false;
         }
         return true;
