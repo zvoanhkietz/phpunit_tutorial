@@ -1,10 +1,10 @@
 {
-    "name": "netbeans/calculator-phpunit",
+    "name": "zvoanhkietz/phpunit_tutorial",
     "description": "Simple project using PHPUnit.",
     "authors": [
         {
-            "name": "NetBeans",
-            "email": "tomas.mysik@oracle.com"
+            "name": "Vo Anh Kiet",
+            "email": "zvoanhkietz@gmail.com"
         }
     ],
     "require": {
