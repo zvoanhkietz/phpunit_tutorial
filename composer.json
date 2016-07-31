@@ -1,6 +1,8 @@
 {
     "name": "zvoanhkietz/phpunit_tutorial",
     "description": "Simple project using PHPUnit.",
+    "type": "study",
+    "license": "GPL",
     "authors": [
         {
             "name": "Vo Anh Kiet",
