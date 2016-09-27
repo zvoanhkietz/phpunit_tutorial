@@ -12,8 +12,6 @@ install:
   - composer install --no-interaction --prefer-source
 
 script:
-  - docker exec admiring_lumiere /bin/bash
-  - phpenv --version
-  - phpenv install php-7.0.11
+  - docker exec php-cli /bin/bash
   - php -v
   - ./vendor/bin/phpunit
