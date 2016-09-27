@@ -12,5 +12,8 @@ install:
   - composer install --no-interaction --prefer-source
 
 script:
+  - docker exec phpenv /bin/bash
   - phpenv --version
+  - phpenv install php-7.0.11
+  - php -v
   - ./vendor/bin/phpunit
