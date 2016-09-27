@@ -19,7 +19,7 @@ trait System
      * @param array $params
      * @return mixed
      */
-    public function createObject(\string $className, array $params = [])
+    public function createObject($className, array $params = [])
     {
         return new $className(...$params);
     }
