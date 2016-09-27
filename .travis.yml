@@ -12,5 +12,6 @@ install:
   - composer install --no-interaction --prefer-source
 
 script:
+  - docker exec php-cli /bin/bash
   - php -v
   - ./vendor/bin/phpunit
