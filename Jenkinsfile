@@ -3,12 +3,9 @@ node {
 
             checkout scm
 
-            docker.image('jenkins_slaves_php').inside {
-
               stage("Install Bundler") {
                 sh "composer"
               }
-           }
 
         }
 
