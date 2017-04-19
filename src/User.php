@@ -22,7 +22,7 @@ class User
             $this->log("Couldn't save user: " . json_encode($user), 'error');
             return false;
         }
-        return true;
+        return (object) $user;
     }
 
 }
