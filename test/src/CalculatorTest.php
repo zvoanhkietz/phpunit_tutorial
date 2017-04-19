@@ -1,7 +1,6 @@
 <?php
 namespace App\Test;
 
-use PHPUnit\Framework\TestCase;
 use App\Calculator;
 
 /**
