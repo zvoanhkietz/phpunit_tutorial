@@ -54,4 +54,17 @@ trait System
         return rand($min, $max);
     }
 
+    /**
+     * Redefine json_encode php function
+     * 
+     * @param  $value
+     * @param int $options
+     * @param int $depth
+     * @return string
+     */
+    public function jsonEncode($value, $options = 0, $depth = 512)
+    {
+        return json_encode($value, $options, $depth);
+    }
+
 }
