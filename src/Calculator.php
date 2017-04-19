@@ -50,11 +50,20 @@ class Calculator
     public function divide($a, $b)
     {
         if ($b == 0) {
+            // @codeCoverageIgnoreStart
             throw new InvalidArgumentException('Cannot divide by zero');
+            // @codeCoverageIgnoreEnd
         }
         return $a / $b;
     }
 
+    /**
+     * 
+     * @param type $a
+     * @param type $b
+     * @return type
+     * @codeCoverageIgnore
+     */
     public function modulo($a, $b)
     {
         return $a % $b;
